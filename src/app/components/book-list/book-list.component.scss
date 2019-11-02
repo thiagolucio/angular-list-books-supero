@@ -13,6 +13,18 @@
   flex: 1 1 auto;
 }
 
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;    
+}
+
+.mat-form-field {   
+  line-height: 2.125!important;    
+}
+
 // Search personalizada
 .search-bar {
   margin-bottom: auto;
@@ -75,10 +87,10 @@
 .search-bar {
   margin-bottom: auto;
   margin-top: auto;
-  height: 50px;
+  height: 40px;
   background-color: #353b48;
-  border-radius: 27px;
-  padding: 5px;
+  border-radius: 25px;
+  // padding: 5px;
 }
 
 .search_input {
