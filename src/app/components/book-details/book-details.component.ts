@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BookService} from 'src/app/services/book.service';
 import {Location} from '@angular/common';
+import {BooklistInterface} from 'src/app/interfaces/booklist-interface';
 
 @Component({
   selector: 'app-book-details',
@@ -10,7 +11,7 @@ import {Location} from '@angular/common';
 })
 export class BookDetailsComponent implements OnInit {
 
-  bookData = [];
+  public bookData = [];
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -28,7 +29,7 @@ export class BookDetailsComponent implements OnInit {
         .subscribe((data: any) => {
           const bookDetail = data.filter(book => book.id === idBook);
           this.bookData = bookDetail[0];
-          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', bookDetail);
+          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', this.bookDetail);
         });
     });
   }
