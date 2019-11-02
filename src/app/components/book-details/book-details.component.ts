@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
-import { ActivatedRoute, Router } from '@angular/router';
-import { BookService } from 'src/app/services/services.service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {BookService} from 'src/app/services/book.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-book-details',
@@ -13,29 +13,30 @@ export class BookDetailsComponent implements OnInit {
   bookData = [];
 
   constructor(
-    breakpointObserver: BreakpointObserver,
     private readonly route: ActivatedRoute,
-    private readonly router: Router,
     private bookService: BookService,
-    private _location: Location) {}
+    private location: Location) {}
 
   ngOnInit() {
-    this.getDetails();
+    this.getBookDetails();
   }
 
-  getDetails(): void {
+  getBookDetails(): void {
     this.route.params.subscribe(params => {
-      const idPayment = params['id'];
+      const idBook = params.id;
       this.bookService.getBookList()
         .subscribe((data: any) => {
-          const paymentDetail = data.data.filter(payment => payment.id === idPayment);
-          this.bookData = paymentDetail[0];
+          const bookDetail = data.filter(book => book.id === idBook);
+          this.bookData = bookDetail[0];
+          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', bookDetail);
         });
     });
   }
 
+
+
   onClick() {
-    this._location.back();
+    this.location.back();
   }
 
 }

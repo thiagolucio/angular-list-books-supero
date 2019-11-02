@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
 
-  private readonly APIBOOLIST = `${environment.API}/livros`;
+  private readonly APILIST = `${environment.API}/livros`;
+
   constructor(private http: HttpClient) { }
 
   getBookList(): Observable<BooklistInterface[]> {
-    return this.http.get<BooklistInterface[]>(this.APIBOOLIST)
+    return this.http.get<BooklistInterface[]>(this.APILIST)
       .pipe(
         tap(console.log));
   }
-
 }

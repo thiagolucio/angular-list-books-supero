@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DataSource } from '@angular/cdk/collections';
 import { BooklistInterface } from '../../interfaces/booklist-interface';
-import { BookService } from '../../services/services.service';
+import { BookService } from '../../services/book.service';
 import { Observable } from 'rxjs';
 import {Router} from '@angular/router';
 import {MatTableDataSource} from '@angular/material';
