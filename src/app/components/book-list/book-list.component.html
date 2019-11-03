@@ -1,18 +1,19 @@
 
   <mat-grid-list [cols]="1" rowHeight="80px" style="margin-bottom: 8px;">
     <mat-grid-tile [colspan]="1" [rowspan]="1" class="bg-titles color-dark-gray">
-      <mat-toolbar color="primary">
+      <!-- <mat-toolbar color="primary"> -->
+      <mat-toolbar style="background: transparent;">
         <mat-toolbar-row>
-    <span>
-       <img src="assets/img/supero_cor.svg" class="logo-supero"/>
-    </span>
+          <span><img src="assets/img/supero_cor.svg" class="logo-supero"/></span>
           <span class="example-spacer"></span>
-          <div class="search-bar">
-            <input class="search_input" type="text" name="" placeholder="Pesquisar..." (keyup)="applyFilter($event.target.value)">
-            <a href="#" class="search_icon">
-              <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">search</mat-icon>
-            </a>
-          </div>
+          <div class="form-inline">
+            <div class="search-bar">
+              <input class="search_input" type="text" name="" placeholder="Pesquisar..." (keyup)="applyFilter($event.target.value)">
+              <a href="#" class="search_icon">
+                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">search</mat-icon>
+              </a>
+            </div>
+          </div>  
         </mat-toolbar-row>
       </mat-toolbar>
       <span class="spacer-horiz"></span>
@@ -23,7 +24,7 @@
     <mat-card-content>
       <table mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="titulo">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Título </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> TÍTULO </th>
           <td mat-cell *matCellDef="let row">{{row.titulo}}</td>
         </ng-container>
 
@@ -33,17 +34,17 @@
         </ng-container>
 
         <ng-container matColumnDef="autor">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Autor </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> AUTOR </th>
           <td mat-cell *matCellDef="let row">{{row.autor}}</td>
         </ng-container>
 
         <ng-container matColumnDef="editora">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Editora </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> EDITORA </th>
           <td mat-cell *matCellDef="let row">{{row.editora}}</td>
         </ng-container>
 
         <ng-container matColumnDef="ano">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Ano </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ANO </th>
           <td mat-cell *matCellDef="let row">{{row.ano}}</td>
         </ng-container>
 

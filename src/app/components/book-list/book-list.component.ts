@@ -1,12 +1,12 @@
-import {Component, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DataSource } from '@angular/cdk/collections';
 import { BooklistInterface } from '../../interfaces/booklist-interface';
 import { BookService } from '../../services/book.service';
 import { Observable } from 'rxjs';
-import {Router} from '@angular/router';
-import {MatTableDataSource} from '@angular/material';
+import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material';
 
 
 @Component({
@@ -30,29 +30,27 @@ export class BookListComponent implements OnInit {
     'ano'
   ];
 
-  constructor(private bookService: BookService, private router: Router) {}
+  constructor(private bookService: BookService, private router: Router) { }
 
   ngOnInit() {
     this.bringData();
   }
 
-  bringData(): void {
+  bringData() {
     this.bookService.getBookList()
       .subscribe((res: any) => {
         this.bookListArray = res;
-        console.log('res is ', this.bookListArray);
+        console.log('Dados Carregados com sucesso!');
         this.dataSource = new MatTableDataSource(this.bookListArray);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       }, error => {
-        alert("ERROR");
+        alert(error);
       });
   }
-
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
 }
 
 export class BookListDataSource extends DataSource<any> {
@@ -63,7 +61,6 @@ export class BookListDataSource extends DataSource<any> {
   constructor(private bookService: BookService) {
     super();
   }
-
   connect(): Observable<BooklistInterface[]> {
     return this.bookService.getBookList();
   }

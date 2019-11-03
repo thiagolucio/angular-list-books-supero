@@ -17,57 +17,11 @@ table {
   width: 100%;
 }
 
-th.mat-sort-header-sorted {
-  color: black;    
-}
-
-.mat-form-field {   
-  line-height: 2.125!important;    
-}
-
-// Search personalizada
-.search-bar {
-  margin-bottom: auto;
-  margin-top: auto;
-  height: 50px;
-  background-color: #353b48;
-  border-radius: 27px;
-  padding: 5px;
-}
-
-.search_input {
-  color: white;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color: transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-}
-
-.search-bar:hover > .search_input {
-  padding: 0 10px;
-  width: 850px;
-  caret-color: red;
-  transition: width 0.4s linear;
-}
-
-.search-bar:hover > .search_icon {
-  text-decoration: none;
-  background: white;
-  color: #e74c3c;
-}
-
-.search_icon {
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
+th {
+  // background: #E86738;
+  // color: #333;
+  color: #E86738;
+  font-size: 18px;    
 }
 
 // Search personalizada
@@ -90,7 +44,7 @@ th.mat-sort-header-sorted {
   height: 40px;
   background-color: #353b48;
   border-radius: 25px;
-  // padding: 5px;
+  padding: 5px;
 }
 
 .search_input {
@@ -105,17 +59,15 @@ th.mat-sort-header-sorted {
 }
 
 .search-bar:hover > .search_input {
-  padding: 0 10px;
-  //width: 500px;
-  max-width: 100%!important;
-  caret-color: red;
+  padding: 0 10px;  
+  caret-color: orange;
   transition: width 0.4s linear;
 }
 
 .search-bar:hover > .search_icon {
   text-decoration: none;
   background: white;
-  color: #e74c3c;
+  color: orange;  
 }
 
 .search_icon {
@@ -129,3 +81,31 @@ th.mat-sort-header-sorted {
   color: white;
   text-decoration: none;
 }
+
+
+@media (min-width: 576px) {
+  .search-bar:hover > .search_input {    
+    width: 250px;    
+  }
+}
+
+@media (min-width: 768px) {
+  .search-bar:hover > .search_input {    
+    width: 400px;    
+  }
+}
+
+@media (min-width: 992px) {
+  .search-bar:hover > .search_input {    
+    width: 600px;    
+  }
+}
+
+@media (min-width: 1336px) {
+  .search-bar:hover > .search_input {    
+    width: 1000px;    
+  }
+}
+
+
+
