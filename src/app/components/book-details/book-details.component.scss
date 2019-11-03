@@ -1,0 +1,21 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.title-details {
+  color: #e86738;
+  margin-right: 16px;
+  letter-spacing: 2px;
+}
+
+.img-book img {
+  border: 5px solid #e86738;
+  border-radius: 4px;
+}

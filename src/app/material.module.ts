@@ -16,7 +16,9 @@ import {
   MatTooltipModule,
   MatDialogModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 
@@ -37,7 +39,9 @@ import {
     MatTooltipModule,
     MatDialogModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     CommonModule,
@@ -55,9 +59,12 @@ import {
     MatTooltipModule,
     MatDialogModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [],
-  entryComponents: [],
+  providers: [MatDatepickerModule],
+  entryComponents: []
 })
 export class MaterialModule { }

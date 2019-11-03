@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
   exports: [
     MaterialModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule
   ],
   providers: [],

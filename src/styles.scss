@@ -2,52 +2,63 @@ html,
 body {
   height: 100%;
   background: rgba(232, 103, 56, 1);
-  background: -moz-linear-gradient(
-    top,
-    rgba(232, 103, 56, 1) 0%,
-    rgba(232, 103, 56, 1) 46%,
-    rgba(235, 119, 77, 1) 86%,
-    rgba(245, 153, 120, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    left bottom,
-    color-stop(0%, rgba(232, 103, 56, 1)),
-    color-stop(46%, rgba(232, 103, 56, 1)),
-    color-stop(86%, rgba(235, 119, 77, 1)),
-    color-stop(100%, rgba(245, 153, 120, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(232, 103, 56, 1) 0%,
-    rgba(232, 103, 56, 1) 46%,
-    rgba(235, 119, 77, 1) 86%,
-    rgba(245, 153, 120, 1) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(232, 103, 56, 1) 0%,
-    rgba(232, 103, 56, 1) 46%,
-    rgba(235, 119, 77, 1) 86%,
-    rgba(245, 153, 120, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(232, 103, 56, 1) 0%,
-    rgba(232, 103, 56, 1) 46%,
-    rgba(235, 119, 77, 1) 86%,
-    rgba(245, 153, 120, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(232, 103, 56, 1) 0%,
-    rgba(232, 103, 56, 1) 46%,
-    rgba(235, 119, 77, 1) 86%,
-    rgba(245, 153, 120, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e86738', endColorstr='#f59978', GradientType=0 );
 }
 body {
   margin: 16px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.logo-supero {
+  filter: brightness(500%) grayscale(10%);
+  transition: all 0.5s;
+  height: 40px;
+  margin: 0;
+}
+
+.bg-supero{background-color: #E86738!important; color: white!important;}
+
+.text-center {text-align: center!important;}
+.icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+table {
+  width: 100%;
+}
+
+.td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  color: #E86738;
+  font-size: 16px;  
+}
+
+.td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  border-color: #E86738;
+}
+tr.mat-footer-row, tr.mat-row {
+  height: 60px!important;
+}
+
+.mat-tooltip.tooltip {
+  background-color: #E86738;
+  -webkit-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.75);
+  box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.75);
+  font-size: 14px;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #E86738;
 }

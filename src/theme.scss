@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-primary: mat-palette($mat-deep-orange, A200);
+$custom-accent: mat-palette($mat-gray, 800);
+
+$custom-light-theme: mat-light-theme($custom-primary, $custom-accent);
+$custom-dark-theme: mat-dark-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-light-theme, $custom-dark-theme);
+
+
+.alternative {
+    @include angular-material-theme($custom-light-theme, $custom-dark-theme);
+}
+
+.shadows-elevation {
+    @include mat-elevation-transition;
+    @include mat-elevation(2);
+  
+    &:active {
+      @include mat-elevation(8);
+    }
+  }
