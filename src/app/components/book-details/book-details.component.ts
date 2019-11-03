@@ -11,7 +11,7 @@ import {BooklistInterface} from 'src/app/interfaces/booklist-interface';
 })
 export class BookDetailsComponent implements OnInit {
 
-  public bookData = [];
+  public bookData: [];
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -29,7 +29,7 @@ export class BookDetailsComponent implements OnInit {
         .subscribe((data: any) => {
           const bookDetail = data.filter(book => book.id === idBook);
           this.bookData = bookDetail[0];
-          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', this.bookDetail);
+          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', this.bookData);
         });
     });
   }
