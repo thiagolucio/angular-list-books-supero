@@ -2,16 +2,18 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BookService} from 'src/app/services/book.service';
 import {Location} from '@angular/common';
-import {BooklistInterface} from 'src/app/interfaces/booklist-interface';
+
 
 @Component({
   selector: 'app-book-details',
   templateUrl: './book-details.component.html',
   styleUrls: ['./book-details.component.scss']
 })
+
 export class BookDetailsComponent implements OnInit {
 
-  public bookData: [];
+  BookId: any;
+  bookDtDetails: any;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -22,19 +24,20 @@ export class BookDetailsComponent implements OnInit {
     this.getBookDetails();
   }
 
-  getBookDetails(): void {
+  getBookDetails() {
     this.route.params.subscribe(params => {
       const idBook = params.id;
       this.bookService.getBookList()
         .subscribe((data: any) => {
-          const bookDetail = data.filter(book => book.id === idBook);
-          this.bookData = bookDetail[0];
-          console.log('Dados detalhados', idBook, '/ BOOK DETAIL', this.bookData);
+          // tslint:disable-next-line: triple-equals
+          const BookDetails = data.filter((book: { id: number; }) => book.id == idBook);
+          this.bookDtDetails = BookDetails[0];
+          console.log('Detalhes do Livro carregado com Sucesso', BookDetails);
+        }, error => {
+          alert(error);
         });
     });
   }
-
-
 
   onClick() {
     this.location.back();
