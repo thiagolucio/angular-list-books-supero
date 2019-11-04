@@ -13,7 +13,7 @@ No terminal, na pasta da aplicação  entre com o comando  `ng build` para build
 #Observações:
 - Como não foi fornecido uma base API com dados em JSON. Eu criei uma API com os dados fornecidos no texto do teste e adicionei imagem (limitada aos 16 primeiros de um total de 25 regsitros). Esta API está disponível em "https://my-json-server.typicode.com/thiagolucio/apiJson/livros".
 - O teste foi desenvolvimento com Angular Material como Biblioteca gŕafica. Foram usadas técnicas de temas personalizados, e animações através da biblioteca do angular. 
-- Não foi feito o filtro de faixas de data anual. Ao invés disso foi criado um select mostrando todos os anos cadastrados para que o usuário possa escolher manualmente com isso não se corre o risco de escolher anos que não tenham publicações na base. 
+- Não foi feito o filtro de faixas de data anual como descrito. Ao invés disso foi criado um select mostrando todos os anos cadastrados para que o usuário possa escolher manualmente com isso não se corre o risco de escolher anos que não tenham publicações na base. 
 
 # A solução de pesquisa de livros em compensação possui mais coisas que solicitado no teste. Citadas abaixo:
 - Ordenação de todas as colunas da tabela.
