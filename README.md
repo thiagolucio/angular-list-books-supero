@@ -16,7 +16,7 @@ No terminal, na pasta da aplicação  entre com o comando  `ng build` para build
 - Não foi feito o filtro de faixas de data anual como descrito. Ao invés disso foi criado um select mostrando todos os anos cadastrados para que o usuário possa escolher manualmente com isso não se corre o risco de escolher anos que não tenham publicações na base. 
 
 ## A solução de pesquisa de livros possui(mais características que solicitadas):
-- Ordenação de todas as colunas da tabela.
+- Ordenação crescente ou decrescente de todas as colunas da tabela.
 - Pesquisa digitável em qualquer coluna da tabela (qualquer palavra existente ou número).
 - Paginação (essa pedida no teste).
 - Escolha de quantos registros devem aparecer na página com valores de 5, 10, 25 itens por página.
