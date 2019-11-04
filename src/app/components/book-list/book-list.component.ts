@@ -19,10 +19,9 @@ import {MatDatepicker} from '@angular/material/datepicker';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  bookListArray = [];
+  public bookListArray = [];
   dataSource: any;
-  data: any;
-
+  public contador: any =  this.bookListArray.length;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -40,7 +39,6 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
     this.bringData();
-    this.applyFilter(this.dataSource.filter);
   }
 
   bringData() {
@@ -60,21 +58,9 @@ export class BookListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  dataFilter = (d: Date): Date => {
-    this.dataSource.filter = d.getFullYear();
-    return this.dataSource.filter;
-  }
-
-  inputEvent(event) {
-    // Return date object
-    console.log(event.value);
-  }
-  changeEvent(event) {
-    // Return date object
-    console.log(event.value);
-  }
-
-
+  // selectYear(event) {
+  //   this.applyFilter(event.value);
+  // }
 }
 
 export class BookListDataSource extends DataSource<any> {

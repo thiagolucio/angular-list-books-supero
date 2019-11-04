@@ -1,4 +1,4 @@
-<mat-grid-list [cols]="1" rowHeight="80px" style="margin-bottom: 8px;">
+<mat-grid-list [cols]="1" rowHeight="80px" class="mb-8p">
     <mat-grid-tile [colspan]="1" [rowspan]="1" class="bg-titles color-dark-gray">
         <mat-toolbar style="background: transparent;">
             <mat-toolbar-row>
@@ -13,35 +13,40 @@
     </mat-grid-tile>
 </mat-grid-list>
 <mat-card class="mat-elevation-z4">
-    <mat-card-content>        
-        <div class="flex-container">        
-            <div class="img-book" style="width: 20%; height: auto">
-                <img src="http://thiagolucio.com.br/images/imagem.jpg" style="max-width: 350px;" />
+    <mat-card-content>
+        <div class="flex-container">
+            <div class="img-book" class="w-20 h-auto">
+                <img src="http://thiagolucio.com.br/images/imagem.jpg" class="img-detail" />
             </div>
-            <div style="width: 70%; height: auto">
-            <mat-list role="list">
-                <div style="width: 100%; height: 40px;"><b>DETALHES DA EDIÇÃO</b></div>
-                <mat-list-item role="listitem"><span class="title-details"><b>Título:</b></span> {{bookDtDetails?.titulo}}</mat-list-item> 
-                <hr>            
-                <mat-list-item role="listitem"><span class="title-details"><b>ISBN:</b></span> {{bookDtDetails?.isbn}}</mat-list-item> 
-                <hr>               
-                <mat-list-item role="listitem"><span class="title-details"><b>Autor:</b></span> {{bookDtDetails?.autor}}</mat-list-item>               
-                <hr> 
-                <mat-list-item role="listitem"><span class="title-details"><b>Editora:</b></span> {{bookDtDetails?.editora}}</mat-list-item>       
-                <hr>         
-                <mat-list-item role="listitem"><span class="title-details"><b>Ano de Publicação:</b></span> {{bookDtDetails?.ano}}</mat-list-item>
-                <hr>                
-                <mat-list-item role="listitem"><span class="title-details"><b>Idioma:</b></span> {{bookDtDetails?.idioma}}</mat-list-item>       
-                <hr>         
-                <mat-list-item role="listitem"><span class="title-details"><b>Peso:</b></span> {{bookDtDetails?.peso}} Gramas</mat-list-item>  
-                <hr>                         
-                <mat-list-item role="listitem"><span class="title-details"><b>Dimensões (Comprimento X Largura X Altura):</b></span> {{bookDtDetails?.dimensoes.comprimento}}cm X {{bookDtDetails?.dimensoes.largura}}cm X {{bookDtDetails?.dimensoes.altura}}cm </mat-list-item>                           
-            </mat-list>                                 
+            <div class="w-70">
+                <mat-list role="list">
+                    <div class=" h-40p"><b>DETALHES DA EDIÇÃO</b></div>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Título:</b></span>
+                        {{bookDtDetails?.titulo}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>ISBN:</b></span>
+                        {{bookDtDetails?.isbn}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Autor:</b></span>
+                        {{bookDtDetails?.autor}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Editora:</b></span>
+                        {{bookDtDetails?.editora}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Ano de Publicação:</b></span>
+                        {{bookDtDetails?.ano}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Idioma:</b></span>
+                        {{bookDtDetails?.idioma}}</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Peso:</b></span>
+                        {{bookDtDetails?.peso}} Gramas</mat-list-item>
+                    <hr>
+                    <mat-list-item role="listitem"><span class="title-details"><b>Dimensões (Comprimento X Largura X
+                                Altura):</b></span> {{bookDtDetails?.dimensoes.comprimento}}cm X
+                        {{bookDtDetails?.dimensoes.largura}}cm X {{bookDtDetails?.dimensoes.altura}}cm </mat-list-item>
+                </mat-list>
             </div>
         </div>
-    </mat-card-content>
-    <mat-card-actions>
-
-
-    </mat-card-actions>
+    </mat-card-content> 
 </mat-card>

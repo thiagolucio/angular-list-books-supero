@@ -18,7 +18,9 @@ import {
   MatListModule,
   MatDividerModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatChipsModule,
+  MatSelectModule
 } from '@angular/material';
 
 
@@ -41,7 +43,9 @@ import {
     MatListModule,
     MatDividerModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule,
+    MatSelectModule
   ],
   exports: [
     CommonModule,
@@ -61,7 +65,9 @@ import {
     MatListModule,
     MatDividerModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule,
+    MatSelectModule
   ],
   declarations: [],
   providers: [MatDatepickerModule],
