@@ -1,6 +1,10 @@
 # ListagemLivros
+O Projeto foi desenvolvido em Angular 8, utilizando a Biblioteca Visual Angular Material. Também foi utilizado o Angular Cli para geração de dados. 
 
-Projeto criado com Angular Cli [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+## Instruções para infra do projeto:
+
+1) git clone https://github.com/thiagolucio/angular-list-books-supero
+2) Entrando na pasta do projeto, usando o terminal faça a instalação das Dependências através do comando "npm install"
 
 ## Servidor de Desenvolvimento
 
